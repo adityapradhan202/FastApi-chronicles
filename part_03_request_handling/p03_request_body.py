@@ -1,4 +1,5 @@
 # To send data in the body of the request, we use pydantic BaseModel class
+# Here we will understand how to send data in raw json form in the request body
 
 from fastapi import FastAPI
 from pydantic import BaseModel

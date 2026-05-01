@@ -25,7 +25,7 @@ data = '{"name":"Car", "id":4, "skills":["python", "sql"]}'
 data = json.loads(data)
 
 try:
-    # This converts a valid python dictionary intoo an instance of data model class
+    # This converts a valid python dictionary into an instance of data model class
     user = User.model_validate(data)
 
     print(f"\nDetails of user:")

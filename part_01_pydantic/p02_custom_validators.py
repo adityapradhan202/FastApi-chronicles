@@ -1,5 +1,5 @@
 # We can also create class or instance method for custom validation
-# We 
+
 from pydantic import BaseModel
 from pydantic import model_validator, ValidationError
 

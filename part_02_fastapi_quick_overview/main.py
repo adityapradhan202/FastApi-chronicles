@@ -6,6 +6,8 @@ app = FastAPI()
 # @app.get means get request
 @app.get("/")
 def read_root():
+    # Convert's it into json by default
+    # It has json encoder
     return {
         "message":"you are stronger than you think",
     }
