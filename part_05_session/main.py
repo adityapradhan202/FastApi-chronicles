@@ -5,6 +5,8 @@ from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 from fastapi.responses import RedirectResponse
 
+# Important module for session - itsdangerous (use pip to install it)
+
 app = FastAPI()
 # secret key is important to prevent attackers
 # This secret key helps us to reject any cookies that do not match the signature against the secret_key
@@ -34,6 +36,7 @@ def logged_in(request:Request):
         })
     else:
         print("User not in the session! But tried to log in!")
+        return RedirectResponse(url="/", status_code=303)
     
 @app.post("/logout")
 def logout(request:Request):
